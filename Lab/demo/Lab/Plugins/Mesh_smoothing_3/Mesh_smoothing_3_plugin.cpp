@@ -58,8 +58,6 @@ public Q_SLOTS:
 
     Scene_c3t3_item* c3t3_item =
       qobject_cast<Scene_c3t3_item*>(scene->item(index));
-    const auto& c3t3 = c3t3_item->c3t3();
-
     if (c3t3_item)
     {
       // wait cursor
@@ -69,6 +67,7 @@ public Q_SLOTS:
       time.start();
 
       //todo : add smoothing code here
+      const auto& c3t3 = c3t3_item->c3t3();
 
       std::cout << "Smoothing done (" << time.elapsed() << " ms)" << std::endl;
 
