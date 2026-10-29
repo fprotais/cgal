@@ -33,11 +33,11 @@ namespace CGAL::internal::Hexmeshing
 
     set_fraction(lcc, length_of_4_template, cellIdentifier, decideFunc);
 
-    move_points_onto_mesh_with_volume_fraction(lcc, move_mark, inner_mark);
 
     // smoothing
     if(smooth)
     {
+      move_points_onto_mesh_with_volume_fraction(lcc, move_mark, inner_mark);
       surface_smoothing(lcc, move_mark, inner_mark);
       volume_smoothing(lcc, move_mark);
     }
